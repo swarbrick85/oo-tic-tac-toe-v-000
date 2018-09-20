@@ -40,13 +40,16 @@ end
   end
 
 
-def position_taken?
-  if @board[@i] == " "
+def position_taken?(x)
+  if @board[x] == " "
     return false 
- elsif @board[@i] == ""
  return false
-  elsif @board[@i] == "X" || @board[@i] == "O"
+ elsif @board[x] == ""
+ return false
+  elsif @board[x] == "X" || @board[x] == "O"
     return true 
+  else 
+    return false
   end
 end
 
