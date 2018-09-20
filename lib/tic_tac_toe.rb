@@ -69,11 +69,12 @@ end
 def turn
   puts "Please enter 1-9:"
   q = gets.strip
-  @i = input_to_index(q)
-  if valid_move?
-    move(@i, current_player)
+  r = input_to_index(q)
+  s = valid_move?(r)
+  if s == true
+    @board[r] = current_player
     display_board
-  elsif !valid_move? 
+  elsif !s 
   turn
   end
 end
