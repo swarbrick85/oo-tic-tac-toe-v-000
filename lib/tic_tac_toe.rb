@@ -38,7 +38,7 @@ end
     puts "-----------"
     puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
   end
-end
+
 
 def position_taken?
   if @board[@i] == " "
@@ -116,5 +116,6 @@ def full?
      return nil
 else 
   @board[won?[0]]
+end
 end
 end
