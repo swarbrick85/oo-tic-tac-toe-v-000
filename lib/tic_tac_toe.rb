@@ -53,14 +53,15 @@ def position_taken?(x)
   end
 end
 
-def valid_move?
-  if @i < 0 || @i > 8 
+def valid_move?(x)
+  if x < 0 || x > 8 
     return false
-  elsif @board[@i] == " "
+  end
+  if @board[x] == " "
     return true
- elsif @board[@i] == ""
+ elsif @board[x] == ""
     return true
-  elsif @board[@i] == "X" || @board[@i] == "O"
+  elsif @board[x] == "X" || @board[x] == "O"
     return false
   end
 end
